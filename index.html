@@ -56,15 +56,39 @@ dialog button{position:absolute;background:none;border:0;color:#fff;font:400 2re
 .x{top:.5rem;right:.5rem}.prev{left:.25rem;top:50%}.next{right:.25rem;top:50%}
 @media (prefers-reduced-motion:reduce){.frame{transition:none}}
 </style>
+<!-- Google Search Console verification (optional): paste the meta tag Google gives you here
+<meta name="google-site-verification" content="YOUR_CODE">
+-->
+
+<!-- Google Analytics (GA4)
+     1. In analytics.google.com go to Admin > Data streams > your web stream and copy the Measurement ID (looks like G-ABC123XYZ9).
+     2. Replace the ID in GA_ID below. If it is not a valid G- ID, nothing is loaded and no data is sent.
+     The script loads after the page finishes, so it does not slow down the first view. -->
+<script>
+(function(){
+  var GA_ID='G-QCT3DHKK83';
+  if(!/^G-[A-Z0-9]{6,}$/.test(GA_ID))return;
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments)}
+  window.gtag=gtag;
+  gtag('js',new Date());
+  gtag('config',GA_ID);
+  addEventListener('load',function(){
+    var s=document.createElement('script');
+    s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;
+    document.head.appendChild(s);
+  });
+})();
+</script>
 </head>
 <body>
 
   <div class="page">
   <div class="wrap"><main class="gallery">
-    <button class="frame" aria-label="Open photo: sunflower"><img decoding="async" src="images/photo-1.jpg" style="object-position:55% 50%" alt="Sunflower with bee against a blue sky"></button>
+    <button class="frame" aria-label="Open photo: sunflower with bee"><img decoding="async" src="images/photo-1.jpg" style="object-position:55% 50%" alt="Sunflower with bee against a blue sky"></button>
     <button class="frame" aria-label="Open photo: goslings"><img decoding="async" src="images/photo-2.jpg" style="object-position:46% 50%" alt="Goslings on a shoreline"></button>
-    <button class="frame" aria-label="Open photo: eagle"><img decoding="async" src="images/photo-3.jpg" style="object-position:80% 50%" alt="African Fish Eagle in profile"></button>
-    <button class="frame" aria-label="Open photo: parrot"><img decoding="async" src="images/photo-4.jpg" style="object-position:10% 50%" alt="Macaw, spread wings"></button>
+    <button class="frame" aria-label="Open photo: African Fish Eagle"><img decoding="async" src="images/photo-3.jpg" style="object-position:80% 50%" alt="African Fish Eagle in profile"></button>
+    <button class="frame" aria-label="Open photo: macaw"><img decoding="async" src="images/photo-4.jpg" style="object-position:10% 50%" alt="Macaw, spread wings"></button>
     <button class="frame" aria-label="Open photo: flower"><img decoding="async" src="images/photo-5.jpg" style="object-position:52% 50%" alt="Purple balloon flower in bloom"></button>
   </main></div>
 
